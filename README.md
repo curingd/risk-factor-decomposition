@@ -101,10 +101,8 @@ pip install numpy pandas matplotlib seaborn scikit-learn statsmodels
 
 ### Running
 
-Each stage is a standalone script. Note that the scripts read the panel from a
-hard-coded `INPUT_CSV` path and write figures/CSVs to an output directory —
-point these at [`Excel/factor_returns.csv`](Excel/factor_returns.csv) and a local
-folder before running:
+Every script resolves its own paths relative to the repo, so each one runs
+as-is from any working directory — no path editing required:
 
 ```bash
 python "PCA/pca_factor_analysis.py"
@@ -112,6 +110,14 @@ python "Ridge and LASSO/ridge_lasso.py"
 python "Ridge and LASSO/unwind_ridge_lasso.py"
 python "Model Comparison/model_fit_table.py"
 ```
+
+Run `unwind_ridge_lasso.py` before `model_fit_table.py`: the comparison table
+reads the raw (un-normalised) Lasso coefficients that the unwinding step
+produces. The other scripts are independent and can be run in any order.
+
+Each script regenerates its outputs in place — CSVs and the post-Lasso summary
+alongside their own script, all figures in `Images/` — overwriting the
+committed versions.
 
 ---
 
