@@ -1,0 +1,27 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          asset_returns   R-squared:                       0.716
+Model:                            OLS   Adj. R-squared:                  0.710
+Method:                 Least Squares   F-statistic:                     117.7
+Date:                Wed, 03 Jun 2026   Prob (F-statistic):           4.24e-38
+Time:                        08:16:23   Log-Likelihood:                -203.20
+No. Observations:                 144   AIC:                             414.4
+Df Residuals:                     140   BIC:                             426.3
+Df Model:                           3                                         
+Covariance Type:            nonrobust                                         
+=====================================================================================
+                        coef    std err          t      P>|t|      [0.025      0.975]
+-------------------------------------------------------------------------------------
+const                 0.3952      0.088      4.468      0.000       0.220       0.570
+IG_gilt_spread        0.3395      0.045      7.557      0.000       0.251       0.428
+S&P_500_HY_spread    -0.3334      0.063     -5.315      0.000      -0.457      -0.209
+VIX_change           -0.0175      0.004     -4.752      0.000      -0.025      -0.010
+==============================================================================
+Omnibus:                        1.881   Durbin-Watson:                   2.212
+Prob(Omnibus):                  0.390   Jarque-Bera (JB):                1.847
+Skew:                          -0.272   Prob(JB):                        0.397
+Kurtosis:                       2.887   Cond. No.                         30.2
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
